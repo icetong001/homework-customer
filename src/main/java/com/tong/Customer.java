@@ -10,12 +10,15 @@ public class Customer {
         this.id = id;
         this.cost = cost;
         this.discount = discount;
-        this.price = price;
+        price = cost - discount;
+        if (discount < 100) {
+            System.out.println(id + "\t" + cost + "\t" + "    " + discount + "\t" + price);
 
+        } else {
+
+            System.out.println(id + "\t" + cost + "\t" + discount + "\t" + price);
+
+
+        }
     }
-
-    public void print() {
-        System.out.println(id + "\t" + cost + "\t" + discount + "\t" + price);
-    }
-
 }
